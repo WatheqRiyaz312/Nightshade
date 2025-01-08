@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nightshade Graphics - We're launching soon!">
+    <meta name="author" content="Nightshade Graphics">
+    <title>Nightshade Graphics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome -->
+</head>
+<body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>    
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Nightshade Graphics Logo">
+        </div>
+        <div class="socials">
+            <a href="https://www.facebook.com/share/1BDS817Gwm/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/nightshade.graphics?igsh=MW0yanFsZWwzem45cg==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@nightshade.graphi?_t=ZS-8stsccfdFFV&_r=1" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/+94741475708" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <!-- Default video for desktop view -->
+            <video class="hero-video desktop-video" autoplay muted loop>
+                <source src="hero.mp4" type="video/mp4">
+            </video>
+
+            <!-- Mobile video for mobile view -->
+            <video class="hero-video mobile-video" autoplay muted loop>
+                <source src="heromobile.mp4" type="video/mp4">
+            </video>
+
+            <div class="hero-overlay">
+                <div class="hero-text">
+                    <h1>Our Website is Launching Soon</h1>
+                    <p>Explore the creative brilliance of Nightshade Graphics. Our website is on the way to better serve your design needs.</p>
+                    <div class="countdown">
+                        <div id="countdown-timer">
+                            <div class="time-block">
+                                <span id="days" class="time-number">00</span>
+                                <p>Days</p>
+                            </div>
+                            <div class="time-block">
+                                <span id="hours" class="time-number">00</span>
+                                <p>Hours</p>
+                            </div>
+                            <div class="time-block">
+                                <span id="minutes" class="time-number">00</span>
+                                <p>Minutes</p>
+                            </div>
+                            <div class="time-block">
+                                <span id="seconds" class="time-number">00</span>
+                                <p>Seconds</p>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nightshade Graphics. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

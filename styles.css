@@ -1,0 +1,263 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Preloader styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black; /* Background color for preloader */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader {
+    border: 5px solid rgba(255, 255, 255, 0.1); /* Light outer ring */
+    border-top: 5px solid red; /* Rotating top ring */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+/* Animation for spinning loader */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    animation: slide-down 1s ease-in-out; /* Slide-in animation */
+}
+
+header .logo img {
+    width: 100px;
+    animation: fade-in 2s ease-in-out; /* Fade-in animation */
+}
+
+header .socials {
+    display: flex;
+    gap: 15px;
+    padding-right: 35px;
+}
+
+header .socials a {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s, color 0.3s;
+    animation: fade-in 1.5s ease-in-out;
+}
+
+header .socials a:hover {
+    transform: scale(1.2);
+    color: red;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    animation: fade-in 1.5s ease-in-out; /* Fade-in animation */
+}
+
+/* Adjust hero height for mobile */
+@media (max-width: 768px) {
+    .hero {
+        height: 90vh; /* Reduce hero height for smaller screens */
+    }
+}
+
+/* Video Styles */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Hide Mobile Video by Default */
+.mobile-video {
+    display: none;
+}
+
+/* Show Mobile Video for Small Screens */
+@media (max-width: 768px) {
+    .desktop-video {
+        display: none; /* Hide desktop video */
+    }
+
+    .mobile-video {
+        display: block; /* Show mobile video */
+    }
+}
+
+/* Hero Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Darker overlay for better text visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.hero-text {
+    max-width: 80%;
+    animation: slide-up 1.5s ease-out; /* Slide-up animation */
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Countdown Timer */
+.countdown {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+#countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.time-block {
+    text-align: center;
+}
+
+.time-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s, opacity 0.3s; /* Smooth changes */
+}
+
+/* Animation Effects */
+.time-number.animate {
+    transform: scale(1.3);
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.time-block p {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000000;
+    color: white;
+    animation: fade-in 2s ease-in-out;
+}
+
+/* Keyframes for Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoom-in {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    header .socials a {
+        font-size: 1.2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    #countdown-timer span {
+        font-size: 1.5rem;
+    }
+}
